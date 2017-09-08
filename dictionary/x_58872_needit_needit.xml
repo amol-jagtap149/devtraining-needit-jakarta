@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="it" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Human Respurces" sequence="0" value="hr"/>
+                <element label="IT" sequence="1" value="it"/>
+                <element label="Finanace" sequence="2" value="finance"/>
+                <element label="Transport" sequence="3" value="transport"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What needed" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="HR1" sequence="0" value="hr1"/>
+                <element label="Finance1" sequence="1" value="finance1"/>
+                <element label="IT1" sequence="2" value="it1"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
